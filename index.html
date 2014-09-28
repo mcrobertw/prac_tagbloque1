@@ -1,0 +1,49 @@
+<!-- LINEAS, ROTURAS DE LINEAS Y PARRAFOS (ELEMENTO DE BLOQUE 1 DE 12)
+	- Roturas de lineas.-
+    	Etiqueta br dentro de p
+	- Espacios sin rotura.-
+    	el caracter especial &nbsp(non-breaking space), se usa para 		que no se separe cierto grupo de palabras... como un slogan
+        
+        Se lo usa tambien para sangrado
+	- Guiones flexibles
+    	Palabras que se parten en dos lineas, mediante el uso de guiones
+	- Preservar formateado
+    	Indica que se renderize en el browser un conjunto de texto, tal y cual est en el codigo, la preformatea
+	- Sangrados
+	- Cabeceras
+	- Lineas horizontales
+	- Agrupamientos con <div>
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Desarrollo web</title>
+</head>
+	<!--ROTURAS DE LINEAS-->
+	<p>	Robert <br /> Moreira</p>
+    <p>Investigacion por la profesion, pasion por la vida</p>
+    
+    <!--ESPACIOS SIN ROTURA-->
+    <p> Un d&iacute;a despu&eacute;s de comer mucho senti mal estomago.. recorde "Toma&nbsp;Digeril&nbsp;y&nbsp;tu&nbsp;estomago estara&nbsp;en&nbsp;una&nbsp;fiesta&nbsp;sin&nbsp;fin"
+    </p>
+    
+    <p><!--ESPACIOS SIN ROTURA: tambien se usa para sangria
+		Tiene un uso deprecado, actualmente se usa la propiedad text-indent o padding-left para sangrar TODO el parrafo    
+    	-->
+    	&nbsp;&nbsp;&nbsp;y pude seguir comiendo :)
+    </p>
+    
+    <pre><!--PRESERVAR FORMATEADO-->
+    	 Si les decimos a las personas mayores:
+"He visto una casa preciosa de ladrillo rosa, con geranios en las ventanas y palomas en el tejado",
+jamás llegarán a imaginarse cómo es esa casa. 
+Es preciso decirles: "He visto una casa que vale cien mil francos". 
+Entonces exclaman entusiasmados: "¡Oh, qué preciosa es!"
+</pre>
+    
+    
+<body>
+</body>
+</html>
