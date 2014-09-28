@@ -1,0 +1,53 @@
+<!-- LISTAS (ELEMENTO DE BLOQUE 2 DE 12)
+	- Funcionamiento de listas.- Tienen su origen en ue la web fue creada para investigacion
+    - Listas ordenadas.- Conocidas como numeradas, usan <ol> Order List, se puede jugar con la propiedad
+    	"list-style", "list-style-type", "list-style-position: inside, outside"
+        * La propiedad "start" en las listas ordenadas permite fijar el numero de inicio de la lista
+          Aunque este uso es deprevado, se prefiere usar hojas de estilos css como:
+          
+          ol {counter-reset: list 11;}
+          	li {list-style-type: none;}
+          li:before{
+          	content: counter(list,decimal) ". ";
+            counter-increment: list;
+          
+    - Listas desordenadas.- vienen con bullet (vinetas)
+    	Usan <ul>, urordered list
+        Tambien usan la propiedad "list-style-type" pero con los valores: disc, circle, square, none 	
+        Tambien "list-style-position: inside, outside"
+        
+        Se pueden usar imagenes como simbolos para listas desordenadas:
+        list-style-image: url(url_to_image);
+    - Listas de definicion.- son por pares, TERMINO y DEFINICION, usan <dl> definition list
+    	<dd> Definition Description
+        <dt> Definition Term
+    - Listas anidadas.- Hacer que un tipo de lista aparezca dentro de otro.
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Desarrollo web</title>
+<style type="text/css">
+	 ol {counter-reset: list 11;}
+     li {list-style-type: none;}
+     li:before{
+     content: counter(list,decimal) ". ";
+     counter-increment: list;      
+</style>
+
+</head>
+	<ol>
+    	<li>Presidente</li>
+        <li>Constitucional</li>
+        <li>Del</li>
+        <li>Ecuador</li>
+        
+    </ol>
+    
+    
+<body>
+</body>
+</html>
