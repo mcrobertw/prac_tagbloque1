@@ -1,0 +1,300 @@
+<!-- 
+1. Lineas, rotulas de lineas y parrafo
+2. Listas
+3. Imagenes
+4. Enlaces
+5. Texto
+6. Caracteres Especiales
+7. Tablas
+8. Pagina disenada con tablas
+9. Marcos
+10. Formularios
+11. Multimedia
+12. Scripts
+
+Tablas(ELEMENTO  7 DE 12)
+**Partes de tablas en HTML**
+- Pie de fila
+- Cuerpo de fila
+- Cabecera de fila
+- Titulo
+- Cuerpo de celda
+- Cabecera de celda
+- Columnas
+- Filas
+
+**las tabla se define con la etiqueta <table>
+  las fils se definen con la etiqueta <tr>
+  las columnas se definen conla etequeta <td>
+  
+** La propiedad "align (rigth, left, center)" de table, determina si la tabla esta posesionada dentro del elemento que la contiene.
+
+**Espaciado que van a presentar las celdas
+- cellspacing.- Espaciado de celda(espacio entre celdas que forman una tabla)
+	Por defecto es 2px
+- cellpadding.- padding de la celda (Espacio entre el borde de una celda y el contenido)
+	Por defecto es 1px
+    
+**Atributos Bordes y separadores
+	border, por defecto es 0
+    rules
+    
+**Valores para usar con el atributo frame de tables
+void.- No muestra bordes
+above.- Muestra un borde solo en lo alto de la tabla
+below.- Muestra un borde solo en la parte inferior de la tabla
+hsides.- Muestra un borde en los lados horizontales (superior o inferior) solo
+lhs o rhs.- Muestra un borde en el lado izquiero o derecho
+vsides.- Muestra solo bordes en los lados verticales (derecho e izquierdo)
+box o border.- Muestra bordes en todos los lados de la tabla (por defecto cuando un atributo border esta configurado sin especificar frame)
+
+**Valores a usar en el atributo rules de la etiqueta table
+none.- No muestra separadores
+groups.- Muestra separadores solo entre grupos de fila y grupo de columnas
+rows.- Muestra separadores solo entre filas
+cols.- Muestra separadores solo entre columnas
+all.- Separadores apareceran entre todas las filas y columnas
+
+**Atributos para la etiqueta tr
+-align (right, left, center, justify, char).- 
+Controla el alineamiento horizontal de datos en la fila
+observa que si usas el alineamiento CHAR deberas tambien especificar el caracter de alineamiento con el atributo char.
+
+-char.- Especifica el caractr de alineamiento usado con el alineamiento character (char)
+-charoff.- Especifica la anchura del caracter de alineamiento para alinear los datos, puede ser especificado en pixeles o en porcentaje.
+- valign (top, middle, bottom, baseline)
+Controla el alineamiento vertical de datos en la fila
+
+**Atributos de las etiquetas td y th.
+Align.-
+axis.-
+char.-
+charoff.-
+colspan.-
+headers.-
+rowspan.-
+scope.-
+valing.-
+abbr.-
+
+
+**El atributo bgcolor (atributo deprecado)
+	Permite modificar colores para las etiquetas: table, tr, td (celda de datos), th (celda de cabecera)
+
+
+**Tablas complejas
+Cabecera de la tabla (thead)
+Cuerpo de la tabla (tbody)
+Pie de tabla (tfoot)
+
+la ventaja de estas 3 caracteristicas, permite que usuarioshagan scroll de la tabla sin mover pie ni encabezado
+
+Las directrices XHTML indican que estas 3 etiquetas deben ser usadas SIEMPRE en conjunto
+
+Las 3 etiquetas anteriores pueden contener dentro de si, tr, td y th
+
+Las 3 etiquetas poseen las propiedades align, valign, char, charoff
+	char y charoff son propiedades que se ubican entre comillas para valign y align
+
+**Expandir columnas y filas
+Hacer que datos contenidos en una celda se expandan extendiendose por varias columnas o varias filas
+-colspan
+-rowspan
+
+**Agrupar Columnas
+- colgroup.- agrupa grupo de columnas, admite mismos formatos de etiquetas tr, td, th
+	Para definir las columnas que estan dentro de un grupo usamos el atributo SPAM
+- col.- Nos permite definir columnas individuales dentro de un grupo de colgroup
+NORMAS GENERALES PARA EL USO DE LA ETIQUETA COL
+- Las etiquetas vacias no tienen formateo
+- Debemos definir todas las columnas incluso sino tienen contenido
+- Las etiquetas <col> que no existan no heredaran formateo
+- HTML Standard no exige eiqueta de cierre </col>
+- El uso de <col> no cambia la necesidad de usar <td>
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Partes de una tabla</title>
+
+</head>
+
+<body>
+	<table border="1" rules="none">
+ 		<caption>Titulo de la tabla</caption>   
+        <thead>
+        	<tr><td colspan="2">Cabecera de la tabla</td></tr>
+        </thead>
+        <tfoot>
+        	<tr><td colspan="2">Pie de la tabla</td></tr>
+        </tfoot>
+        <tbody>
+        	<tr><th>Cabecera de la celda 1</th><th>Cabecera de la celda 2</th></tr>
+     		<tr><td>Cuerpo de la celda 1</td><td>Cuerpo de la celda 2</td></tr>       
+        </tbody>
+        
+    </table>
+    
+    <hr/>
+    
+    <table border="1">
+    	<tr>
+        <td>Cuerpo celda 1</td><td>Cuerpo celda 2</td>
+        </tr>
+    </table>
+    
+    <hr/>
+    <!-- Las tablas se pueden expandir segun el contenido, se usa la propiedad width de table-->
+    
+    <table border="1">
+    	<tr>
+        <td>Texto mas largo 1</td><td>Texto mas largo 1</td>
+        </tr>
+    </table>
+    
+    <table border="1" width="50%" align="center" cellspacing="10" cellpadding="20"
+    
+    frame="above">     <!-- El 50% del contenedor que este usando-->
+    <tr>
+    	<td>Celda 1 con mayor tamanoweeewerewe</td>
+        <td>Celda 2</td>
+        <td>Celda 3</td>
+        <td>Celda 4</td>
+    </tr>
+    </table>
+    
+    <hr/>
+    
+    <table border="1" cellpadding="5">
+    	<tr>
+        	<th>Cabecera 1</th><th>Cabecera 2</th><th>Cabecera 3</th>
+        </tr>
+        <tr>
+        	<td>Columna 1</td><td>Columna 2</td><td>Columna 3</td>
+        </tr>
+        <tr>
+        	<td>Columna 1</td><td>Columna 2</td><td>Columna 3</td>
+        </tr>
+    </table>
+    
+    <hr/>
+    <!-- Siempre se coloca antes el TFOOT que el TBODY
+    	Se hace esto para permitir al navegador anticipar correctamente la seccion pie y por lo tanto formatear de modo apropiado la seccion tbody
+    -->
+    <table>
+    	<thead>
+        	<tr>
+            	<th>Nombre</th><th>Fecha de nacimiento</th><th>Lugar</th>
+            </tr>
+        </thead>
+        <tfoot>
+        	<td>alfa</td><td>2</td><td>colon</td>
+            
+        </tfoot>
+        <tbody>
+        	<tr>
+            	<td>Robert Moreira</td><td>21/08/1983</td><td>Portoviejo</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+    <hr/>
+    
+    <table border="1" cellpadding="3" cellspacing="2" rules="groups">
+    	<thead align="center">
+        <tr bgcolor="#FFFF00">
+        	<th>Capitulo</th><th>Paginas</th><th>Figuras</th><th>Ilustraciones</th>
+        </tr>
+        </thead>
+    	<tfoot align="center">
+        <tr>
+        	<td>Totales</td><td>40</td><td>40</td><td>55</td>
+        </tr>
+        </tfoot>
+        <tbody align="center">
+        	<tr>
+            	<td>1</td>10<td>10</td><td>10</td><td>10</td>
+            </tr>
+            <tr style="background-color:#FF0">
+            	<td>2</td>10<td>10</td><td>10</td><td>10</td>
+            </tr>
+            <tr>
+            	<td>3</td>10<td>10</td><td>10</td><td>10</td>
+            </tr>
+            <tr>
+            	<td>4</td>10<td>10</td><td>25</td><td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    
+     <hr/>
+     
+     <table border="1" cellpadding="5">
+     	<caption>Resumen de encuestados del 1 al 4</caption>
+        <tr align="center">
+        	<th>Categoria</th><th>Edad</th><th>#1</th><th>#2</th><th>#3</th><th>#4</th>
+        </tr>
+     	<tr>
+        	<td rowspan="3">Hombres<br />Encuestados</td>
+            <td>23</td><td>A</td><td>B</td><td>C</td><td>D</td>
+        </tr>
+        <tr>
+            <td>29</td><td>A</td><td>B</td><td>C</td><td>D</td>
+        </tr>
+        <tr>
+            <td>32</td><td>A</td><td>B</td><td>C</td><td>D</td>
+        </tr>
+        
+        
+        
+        <tr>
+        	<td rowspan="3">Hembrotas<br />Encuestados</td>
+            <td>23</td><td>A</td><td>B</td><td>C</td><td>D</td>
+        </tr>
+        <tr>
+            <td>29</td><td>A</td><td>B</td><td>C</td><td>D</td>
+        </tr>
+        <tr>
+            <td>32</td><td>A</td><td>B</td><td>C</td><td>D</td>
+        </tr>
+     
+     </table>
+     
+      <hr/>
+      
+      <table border="1" cellpadding="5">
+      <caption>Sumario encuestados por respuestas</caption>
+          <tr align="center">
+          	<th>&nbsp;</th>
+            <th colspan="2" width="150">Agresivo</th>
+            <th colspan="2" width="150">Pasivo</th>
+            <th colspan="2" width="150">Pasivo/Agresivo</th>
+          </tr>
+          <tr>
+          	<th>Encuestados</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th>
+          </tr>
+          <tr>
+          	<td>Miguel</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+          </tr>
+      </table>
+      
+      <hr/>
+      
+      <table>
+      	<colgroup span="3" align="center">
+        	<col />
+            <col style="font-weight:bold" />
+        </colgroup>
+        <colgroup span="3" align="justify">
+        
+        </colgroup>
+         <colgroup span="5" align="right" style="font-weight:bold">
+        
+        </colgroup>
+      </table>
+    
+</body>
+</html>

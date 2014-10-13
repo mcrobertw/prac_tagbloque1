@@ -1,0 +1,110 @@
+<!-- 
+1. Lineas, rotulas de lineas y parrafo
+2. Listas
+3. Imagenes
+4. Enlaces
+5. Texto
+6. Caracteres Especiales
+7. Tablas
+8. Pagina disenada con tablas
+9. Marcos
+10. Formularios
+11. Multimedia
+12. Scripts
+
+CARACTERES ESPECIALES(ELEMENTO  6 DE 12)
+- La especificacion del juego de caracteres de un idioma se pasa dentro del content-type
+- SISTEMA NUMERICO DECIMAL. El codigo ASCII de cualquier caracter se especifica como sigue en ejemplo
+- SISTEMA NUMERICO HEXADECIMAL. Para especificacion Hexadecimales el inicio es "&#x", por ejemplo: &#xA0
+- Entidad nemotecnica es por ejemplo: &nbsp;
+	Son mas faciles de recordar porque las letras tienen significado
+- Entidades esenciales
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#34;						&quot;						Comillas dobles
+&#38;						&amp;						Ampersand
+&#60;						&lt;						Menor que
+&#62;						&gt;						Mayor que
+&#160;						&nbsp;						Espacio sin rotura
+
+- ESPACIOS Y GUIONES En (menor) y Em (mayor)
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#8194;						&ensp;						Espacio En
+&#8195;						&emsp;						Espacio Em
+&#8211;						&ndash;						Guion En
+&#8212;						&mdash;						Guion Em
+ 
+- SIMBOLO COPYRIGHT Y TRADEMARK
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#169;						&copy;						Copyright
+&#174;						&reg;						Marga Registrada
+
+
+-SIMBOLOS DE MONEDAS - ENTIDAD DIVISAS
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#162;						&cent;						Centavo
+&#163;						&pound;						Libra inglesa
+&#164;						&curren;					Divisa General
+&#165;						&yen;						Yen Japones
+&#8364;						&euro;						Euro
+
+- MARCAS DE COMILLAS
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#8216;						&lsquo;						Comillas simples izq/apertura
+&#8217;						&rsquo;						Comillas dobles derecha/cierre y apostrofe
+&#8220;						&ldquo;						Comillas dobles izq/apertura
+&#8221;						&rdquo;						Comillas dobles derec/cierre
+
+- FLECHAS
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#8592;						&larr;						Flecha hacia la izqu
+&#8593;						&uarr;						Flecha hacia arriba
+&#8594;						&rarr;						Flecha hacia la derech
+&#8595;						&darr;						Flecha hacia abajo
+&#8596;						&harr;						Flecha izquierdad derecha
+&#8629;						&crarr;						Flecha hacia abajo con ezq hacia izquierdad
+&#8656;						&lArr;						Doble flecha hacia la izq
+&#8657;						&uArr;						Doble flecha hacia arriba
+&#8658;						&rArr;						Doble flecha hacia la derecha
+&#8659;						&dArr;						Doble flecha hacia abajo
+&#8660;						&hArr;						Doble flecha izquierdad derecha
+
+
+-CARACTERES ASENTUADOS
+<<entidad decimal>>			<<entidad mnemotecnica>>		<<caracter>>
+&#192;						&Agrave;						Letra latina A mayuscula con grave
+&#193;						&Aacute;						Letra latina A mayuscula con agudo
+&#194;						&Acirc;							Letra latina A mayuscula con circunflejo
+&#195;						&Atilde;						Letra latina A mayuscula con tilde
+&#196;						&Auml;							Letra latina A mayuscula con dieresis
+
+-Otros
+&radic;
+&permil;
+&divide;
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Caracteres especiales</title>
+
+
+</head>
+
+<body>
+<p>Ejemplo de uso &#160;&#160;&#160;de espacio sin ruptura</p>
+
+<hr/>
+<p>Ejemplo de uso &ensp; de espacio En</p>
+<p>Ejemplo de uso &emsp; de espacio Em</p>
+<p>Ejemplo de uso &ndash; de guion En</p>
+<p>Ejemplo de uso &mdash; de guion Em</p>
+
+<hr/>
+<p>Copyright &copy; y Propiedad de windows &trade; Registrada&reg;</p>    
+<hr/>
+<p><font size="+2">&ldquo;Hola mundo&rdquo; </font></p>
+
+</body>
+</html>

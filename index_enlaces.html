@@ -1,0 +1,56 @@
+<!-- 
+1. Lineas, rotulas de lineas y parrafo
+2. Listas
+3. Imagenes
+4. Enlaces
+5. Texto
+6. Caracteres Especiales
+7. Tablas
+8. Pagina disenada con tablas
+9. Marcos
+10. Formularios
+11. Multimedia
+12. Scripts
+
+Enlaces(ELEMENTO  4 DE 12)
+- Enlazar una pagina web
+	Especificar una url distinta a la existente, entonces se cargar nueva pagina en el navegador
+    El atributo "target: _blank, _self, _parent, _top, _name" es util para abrir enlaces especificados en href en otras ventanas del navegador
+- Que es un enlace
+  la etiqueta a, tiene la propiedad "accesskey" para acceso rapido por teclado.
+  La propiedad "tabindex" sirve para indicar la movilizacionpor teclado
+  la propiedad "name" permite navegacion dentro del mismo archivo
+- La etiqueta link
+- Elegir color de enlaces
+- Crear un ancla
+- Teclas de acceso rapido y orden tabuladores
+- Enlazar un objetivo y un titulo
+- Enlaces relativos y enlaces absolutos
+	Enlace Absoluto.- Provee la ruta completa, incluyendo el protocolo, nombre del servidor. Son llamados absolutos porque la url es absoluta.
+	Enlace Relativo.- No dan toda la informaciòn para poder acceder a una pagina o recurso. Es una direcciòn que hay que tratar en forma relativa con relacion al documento en el cual se encuentra el enlace. Los enlaces relativos solo son utiles para enlazar un recurso que se encuentre dentro del propio sitio web.
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Uso de enlaces</title>
+<script language="javascript">
+	function NewsWindow(){
+		fin=window.open("","NUEVA","width=400,height=400");
+	}
+</script>
+
+<style type="text/css">
+	a:visited {color:#9F0; font-weight:bold;}
+</style>
+
+</head>
+
+<body>
+	<p><a href="JavaScript:NewsWindow()">Abrir ventana</a></p>
+    <p><a href="http://www.google.com" target="NUEVA">Llenar ventana</a></p>
+    
+</body>
+</html>

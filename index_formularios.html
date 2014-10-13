@@ -1,0 +1,133 @@
+<!--  PARTE 2
+1. Lineas, rotulas de lineas y parrafo
+2. Listas
+3. Imagenes
+4. Enlaces
+5. Texto
+6. Caracteres Especiales
+7. Tablas
+8. Pagina disenada con tablas
+9. Marcos
+10. Formularios
+11. Multimedia
+12. Scripts
+
+Tablas(ELEMENTO  10 DE 12)
+<form action="url_para_enviar_datos" method="get!post>
+atributos:
+  Accept, Accept-charset, Enctype, Name, Target
+  
+- Protocolo HTTP GET
+	Vincula los datos al texto de la url actual para pasarselos al destino
+    	(Datos aparecen despues del signo de interrogacion)
+- Protocolo HTTP POST
+ Pasa los datos codificados en el flujo de datos HTTP
+ Los datos no son visibles para los usuarios   
+   
+- Atributos de la etiqueta <form>
+ accept.- Una lista separada por comas de los tipos de datos que el servidor del gestor aceptara.
+ 
+  accept-charset.- Una lista separada por comas de los conjuntos de caracteres que el formulario acepta.
+  
+  enctype.- El tipo contenido de los datos del formulario.
+  
+  name.- El nombre del formulario (descartado usar id en su lugar)
+  
+  target.- Donde se abre el gestor del URL (descartado) 
+  
+- CAMPOS DE FORMULARIOS HTML
+	Campos de archivos.
+    Imagenes.
+    Botones.
+    Campos ocultos.
+    Largas Areas de texto.
+    Cajas de lista.
+    Caja de Marca.
+    **Radio botones (RADIO BUTTONS).
+    	Son mutuamente excluyentes entre si, solo esta activo uno.
+        
+        
+        
+    	<input type="radio">
+        
+        <input type="radio" 
+          name="nombre_grupo" [checked="checked"]
+          value="valor_si_seleccionado">
+    	El atributo NAME determina la exclusion en un grupo que abarca varios radio buttons
+        
+    **Cajas Entrada contrasena(password input boxes)
+    	<input type="password" 
+        name="nombre_campo" 
+        value="valor_inicial"
+        size="tamano del campo"
+        maxlength="numero de caracteres admitidos">
+    	
+        Solo protege los datos contra mirones, no los encripta cuando se produce el envio de informacion
+        
+    
+    **Cajas entrada texto (text input boxes).
+    	<input type="text">
+        
+        <input type="text" 
+        name="nombre_campo" 
+        value="valor_inicial"
+        size="tamano del campo"
+        maxlength="numero de caractere admitidos">
+        
+    **Etiquetas (label). Estaba relacionado con el uso de imagenes, actualmente deprecado.
+    Define un texto que va a hacer referencia a un campo de formulario concreto.
+    En la actualidad es mas sencillo escribir solo el texto.
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diseño paginas html con tablas</title>
+	
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<h6>Uso de label </h6>
+
+<!-- 
+<label for="id_del_campo_indicado">Texto_label</label>
+
+El for de label determina el campo al cual label estara vinculado-->
+
+<form action="procesar.php" method="post">
+	<label for="elNombre">Nombre:</label>
+
+<input type="text" id="elNombre" name="name" value="" size="30" maxlength="40" />
+    
+</form>
+
+
+<h6>Ejemplo 1</h6>
+
+<form action="formhandler.php" method="post">
+	<p>
+    	Nombre:
+        <input type="text" name="nombreusuario" value=""
+        size="30" maxlength="40" />
+    </p>
+    
+    <p>
+    	Email:
+        <input type="text" name="email" value="mcrobertw@hotmail.com"
+        size="40" maxlength="40" />
+    </p>
+    
+    
+    <p>
+    	Password:
+        <input type="password" name="password" value="123456"
+        size="20" maxlength="20" />
+    </p>
+    
+</form>
+
+</body>
+</html>

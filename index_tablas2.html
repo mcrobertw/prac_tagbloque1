@@ -1,0 +1,91 @@
+<!-- 
+1. Lineas, rotulas de lineas y parrafo
+2. Listas
+3. Imagenes
+4. Enlaces
+5. Texto
+6. Caracteres Especiales
+7. Tablas
+8. Pagina disenada con tablas
+9. Marcos
+10. Formularios
+11. Multimedia
+12. Scripts
+
+Tablas(ELEMENTO  8 DE 12)
+-Formateo rudimentario con tablas
+-Ejemplo de paginas reales
+-Paginas flotantes
+-Combinaciones de textos y graficos
+-bloques de menus de navegacion
+-columnas multiples
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Diseno de paginas con tablas</title>
+
+</head>
+
+<body>
+
+<form>
+	<table width="50%" border="1">
+	<tr>
+		<td width="25%"><p>Nombre:</p></td>
+    	<td><p><input type="text" size="40" /></p></td>
+    </tr>
+    
+    <tr>
+    	<td><p>Edad:</p></td>
+   		<td><p>
+            <input type="radio" name="20to30" value="20to30"/>
+            &nbsp;20-30&nbsp;
+            <input type="radio" name="31to40" value="31to40"/>
+            &nbsp;31-40&nbsp;
+            <input type="radio" name="41to50" value="41to50"/>
+            &nbsp;41-50&nbsp;
+			</p>
+         </td>       
+    </tr>
+    
+    </table>
+</form>
+
+<hr/>
+
+<form>
+	<table width="50%" border="1">
+	<tr>
+		<td width="25%"><p>Nombre:</p></td>
+    	<td><p><input type="text" size="40" /></p></td>
+    </tr>
+    
+    <tr>
+    	<td><p>Edad:</p></td>
+   		<td>
+        	<table width="100%" border="1">
+        		<tr>
+		    		<td><p><input type="radio" name="20to30" value="20to30"/></p></td>
+                    <td><p><input type="radio" name="31to40" value="31to40"/></p></td>
+                    <td><p><input type="radio" name="41to50" value="41to50"/></p></td>
+                </tr>
+                <tr>
+           			<td><p>20-30</p></td>
+					<td><p>31-40</p></td>
+        		    <td><p>41-50</p></td>
+                </tr>
+             </table>        
+         </td>       
+    </tr>
+    
+    </table>
+</form>
+
+
+
+</body>
+</html>

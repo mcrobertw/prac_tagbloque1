@@ -1,0 +1,84 @@
+<!-- 
+1. Lineas, rotulas de lineas y parrafo
+2. Listas
+3. Imagenes
+4. Enlaces
+5. Texto
+6. Caracteres Especiales
+7. Tablas
+8. Pagina disenada con tablas
+9. Marcos
+10. Formularios
+11. Multimedia
+12. Scripts
+
+Texto(ELEMENTO  5 DE 12)
+- etiquetas:
+	basefont, size, font
+- Propiedades y valores CSS
+	color (color).- Cambia el color del texto
+    font (font-style,font-variant,font-weight,font-size).- Propiedades de acceso rapido para configurar el estilo de furente, variante, peso y tamano.
+    font-family(family-name).- Configura la familia de la fuente.
+    font-size (font-size).- Configura el tamano de la fuente.
+    font-stretch (normal|wider|narrower, ultra-condensed, extra-condensed|condensed, semi-condensed, semi-expanded|expanded, extra-expanded, ultra-expanded).- Expande o comprime el espaciado de las letras.
+    font-style (Normal|italic|oblique).- Configura fuente como italica.
+    font-variant (Normal,small-caps).- Configura mayusculas pequenas.
+    font-weight (Normal, bold, bolder, lighter).- Configura fuente como negrita.
+    text-decoration (None|underline|overline|line-through|blink).- Configura subrayado, tachado.
+    text-transform (None|capitalize|uppercase|lowercase).- Transforma capitalizacion fuente.
+    
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Uso de texto en documento XHTML</title>
+<style type="text/css">
+	.palabrareservada{font:14pt bold; color:red}
+	.redtext {color:red;}
+</style>
+
+</head>
+
+<body>
+	<font size="+3" color="#FF0000">Se trata de texto en color rojo</font>
+    
+    <cite>se usa para citas</cite>
+    <code>codigo</code>
+    <dfn>Se usa para definiciones</dfn>
+    <en>texto enfatizado </en>
+    <kbd>Texto de teclado</kbd>
+    <samp>De sample: texto de ejemplo</samp>
+    <strong>texto enfatizado mas resaltado</strong>
+    <var>Para variables</var>
+    <hr />
+    <font size="+1" color="#FF0000"><b>color rojo</b></font>
+    
+    <p>Color rojo <span class="palabrareservada"> con CSS<span></p>
+    <hr />
+    <p>Esto es texto normal</p>
+    <p><b>Esto es negria</b></p>
+    <p><i>Esto es texto en italica</i></p>
+    
+    <hr />
+    
+    <p>Si quieres algo la respuesta es tan sencilla como.. <tt>Lucha</tt></p>
+    
+    <hr />
+    <p>Mi cistern tiene 10m<sup>2</sup> y una almacenamiento de 1000m<sub>3</sub></p>
+    
+    <p>Colon<del>era</del><ins>estaba</ins>equivocado, su propuesta de viaje al nuevo mundo teia <del>muchas</del> equivocaciones
+    </p>
+    
+    <hr/>
+    <abbr title="Hipertext Markup Language">HTML</abbr>
+    <hr/>
+    <!-- Agrupar varios elementos dentro de una misma linea con spam-->
+    <p>El texto del documento debe aparecer en color <span style="color: red">rojo</span></p>
+    
+    
+    <p>El texto del documento debe aparecer en color <span class="redtext">rojo</span></p>
+    
+</body>
+</html>
