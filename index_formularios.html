@@ -40,9 +40,39 @@ atributos:
     Imagenes.
     Botones.
     Campos ocultos.
-    Largas Areas de texto.
-    Cajas de lista.
-    Caja de Marca.
+    **Largas Areas de texto (Large Text Area).
+    	Puede aceptar entradas textuales de hasta 1024 caracteres
+        
+        <textarea name="nombre_campo"
+        cols="numero_de_columnas" rows="numero_de_filas">
+        
+        
+    **Cajas de lista (list boxes).
+    	<select name="miLista">
+        
+        <select name="nombre_campo"
+        	size="items_a_mostrar" [multiple="multiple"]>
+            
+            items a mostrar determina el numero de elementos que queremos que se muestre
+         
+         <option [label="etiqueta_informativa"]
+         {selected="selected" [value="valor_si_seleccinado">
+         
+         Debe aparecer una para cada una de las opciones de la lista
+         Usar value es un poco desaconsejado... al usarlo se determina se envie un valor distinto al name en el metodo get o post
+         
+         <optgroup label="nombre_grupo">
+      		Da nombre a los grupos de chequeos  
+        
+    **Caja de Marca (CHECKBOX).
+    	Sirve para seleccionar varias opciones, no son mutuamente excluyentes entre si.
+        <input type="checkbox">
+        
+        <input type="checkbox" 
+          name="nombre_grupo" [checked="checked"]
+          value="valor_si_seleccionado">
+        
+        
     **Radio botones (RADIO BUTTONS).
     	Son mutuamente excluyentes entre si, solo esta activo uno.
         
@@ -77,6 +107,28 @@ atributos:
     **Etiquetas (label). Estaba relacionado con el uso de imagenes, actualmente deprecado.
     Define un texto que va a hacer referencia a un campo de formulario concreto.
     En la actualidad es mas sencillo escribir solo el texto.
+    
+    **CAMPOS OCULTOS.. Poner datos en pagina web que no son mostrados a usuarios.
+    
+    <input type="hidden" name="nombre_del_campo" value="valor_del_campo">
+    
+    Son tipos que se usan para rastrear ciertos datos que son a nivel de muchas paginas
+    
+    **Imagenes
+    Se pueden vincular al igual que los botones con codigo javascript
+    
+    <input type="image" name="nombre_del_campo" 
+    	src="url_a_archivo_imagen">
+        
+     **CAMPOS DE ARCHIVO.-
+     Permiten que un usuario navegue a travez de sus discos locales... ubicando archivo... que puede ser usado en la navegacion para enviarlos a proceso atravez de las paginas
+     
+     <input type="file" name="nombre_del_campo" 
+     size="muestra_tamano_de_campo">
+     
+     Utiliza el metodo POST, no el GET, en el envio del formulario
+     
+     Especificar tu formulario como MULTIPART para poder vincularlo a resto de los datos.
 
 -->
 
@@ -127,6 +179,56 @@ El for de label determina el campo al cual label estara vinculado-->
         size="20" maxlength="20" />
     </p>
     
+    <h6>Ejemplo: Uso de Radio Button</h6>
+    <p>genero:
+    <input type="radio" name="genero" value="mujer" checked="checked"/>Mujer
+    <input type="radio" name="genero" value="mujer">Hombre</input>
+    </p>
+    
+    <p>
+    	<input type="checkbox" name="enviar" checked="checked" value="enviar" />Aladirme a la lista de correo</p>
+    </p>
+    
+    
+    <h4>Uso de List Boxes</h4>
+  <p>Seleccione los dias que tienes disponibles:
+    	<select name="availdays" size="5" multiple="multiple">
+        	<optgroup label="Festivos">
+                <option>Sabado</option>
+                <option>Domingo</option>
+            </optgroup>
+            <optgroup label="Laborables">
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miercoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+            </optgroup>
+        </select>
+        
+        <h4>Uso de TextArea</h4>
+        
+        <textarea name="address" cols="50" rows="6">Manabi
+            Portoviejo
+            Los bajos de Santa Ana
+        </textarea>
+    
+    </p>
+</form>
+
+<form action="formhandler.php" method="post">
+
+	<!--Existen botones predefinidos como SUBMIT y RESET-->
+	<input type="button" name="comprar" value="!Comprar Ya!"
+    	onclick="JavaScript:compraya()"
+     />
+     
+     <input type="image" name="comprar" value="Comprar"
+     	src="bebe1.jpg"
+    	onclick="JavaScript:compraya()"
+     />
+     
+     
 </form>
 
 </body>
