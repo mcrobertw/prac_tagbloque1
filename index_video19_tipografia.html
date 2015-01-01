@@ -1,0 +1,75 @@
+<!--
+	--Especificacion CSS 2.1 para herencias en.
+    	http://www.w3.org/TR/CSS21/cascade.html#inheritance
+    
+    
+    --Especificacion CSS 2.1 para valores en font-family
+    	http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family
+    
+"PROBLEMA 1"
+    --como se debe configurar la tipografia de texto para una pagina web:
+	p{font-family:Georgia, Times, "Times New Roman", serif;   
+    
+    --CSS ofrece 5 valores de fuentes genericas posibles, sino encuentr la fuente especificada en la izquierda.. usa la de la derecha.
+    
+   	EJEMPLOS						VALORES GENERICOS
+Georgia, Times, Times New				serif
+Roman, Garamond, y Century
+Schoolbook
+
+Verdana, Arial, Helvetica,				sans-serif
+Trebuchet, y Tahoma
+
+
+Courier, MS Courier New, y				monospace
+Prestige
+
+Lucida Handwriting y					cursive
+zapf-Chancery
+
+Comic Sans, Whimsey, Criter, y			fantasy
+Cottonwood
+
+
+"PROBLEMA 2"
+--como imponer el control sobre el tamano de las fuentes
+   SOLUCION: a traves de la etiqueta important
+   
+   p{
+   		font-size:12px!important;
+	}
+
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS PRACTICO</title>	
+
+<style type="text/css" media="all">
+	p{
+		color: blue;
+		font-size: small;
+		font-family:Verdana, Geneva, sans-serif;
+	}
+</style>
+
+
+</head>
+
+<body>
+
+    <font face="Arial, Helvetica, sans-serif" size="+10" color="#000099">MAS WEB</font>
+    
+    <p>MAS WEB2</p>
+    
+    <p style="font-family:serif;">Un elemento hijo hereda o tiene el mismo <em>valorde propiedad</em> que su elemento padre. Siempre y cuando en el elemento hijo no se especifique alguna propiedad en particular distinta para el.
+    
+    </p>
+
+
+
+</body>
+</html>
