@@ -1,0 +1,56 @@
+<!--
+selector {propiedad1: valor1; propiedad2: valor2; ... propiedadN: valorN;}
+
+<style type="text/css">
+	h1 {color: Red; font-family: "Times NewRoman";}
+</style>
+ 
+ *****Normas de estilo
+ 1) El selector es Seguido por la definiciòn de las propiedades de formateo, que van entre llaves ({})
+
+ 2) Dos puntos (:) separan en cada par la propiedad y el valor. Los valores que incluyen espacios, deben ir entre comillas.
+
+ 3) Cada par propiedad/valor termina con un punto y coma (;)
+
+
+******Las hojas de estilos se pueden incluir en un proyecto de cualquiera de las siguientes 3 formas.
+
+1) Usando el elemento <style>
+	<style type="text/css">
+		...style definitions...
+	</style>
+
+2) Hojas de estilo externas
+	Se usa un archivo externo
+
+3) Definición de estilos dentro de etiquetas individuales
+	<h1 style="color: red;">titulo rojo</h1>
+
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Un Ejemplo de Estilo</title>
+	
+	<!--
+	<style type="text/css">
+		h1,h2{color: Red; font-family: Distress;}
+	</style>
+	-->
+
+	<link rel="stylesheet" type="text/css" href="css_indexcss.css">
+</head>
+<body>
+	<h1>Septimo Continente</h1>
+	<h1 font="#FF0000" face="Distress">Septimo Continente 2</h1>
+
+	<h1 style="color: #AA0000">You known</h1>
+
+	<h2>Virtual</h2>
+  
+	<p>parrafo</p>
+
+	<!--Ejemplo 1 a 1 de los lugares en los cuales puede estar definido el sitio-->
+</body>
+</html>

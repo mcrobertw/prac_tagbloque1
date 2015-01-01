@@ -9,6 +9,13 @@
 8. Pagina disenada con tablas
 9. Marcos
 10. Formularios
+    ¿Para que sirven?
+    - Verificar o manipular los datos.
+
+    - Enviar los datos por email.
+
+    - Almacenar los datos en un archivo o base de datos.
+
 11. Multimedia
 12. Scripts
 
@@ -36,10 +43,33 @@ atributos:
   target.- Donde se abre el gestor del URL (descartado) 
   
 - CAMPOS DE FORMULARIOS HTML
-	Campos de archivos.
-    Imagenes.
-    Botones.
-    Campos ocultos.
+	**Campos de archivos.
+        Permite la busqueda de archivos dentro de nuestro disco
+        <input type="file" name="nombre_del_campo" size="muestra_tamaño_de_campo">
+        
+        Para poder usar este tipo de campo dentro de un formulario... deben cumplirse los siguientes 2 requisitos:
+        - Especificar tu formulario como multipart para poder vincularlo al resto de los datos.
+        - Usar el mètodo POST, no el GET, en el envio del formulario.
+
+
+    **Imagenes.
+        <input type="image" name="nombre_del_campo" src="url__a_archivo_imagen">
+
+    **Botones.
+        -BOTON SUBMIT
+            <input type="submit" [value="texto_para_boton"]>
+
+        -BOTON RESET
+            <input type="submit" [value="texto_para_boton"]>        
+
+    **Campos ocultos.
+
+    Son campos usados para rastrear datos multipaginas
+        <input type="hidden" name="nombre del campo" 
+            value="valor del campo">
+
+
+
     Largas Areas de texto.
     Cajas de lista.
     Caja de Marca.
@@ -77,6 +107,24 @@ atributos:
     **Etiquetas (label). Estaba relacionado con el uso de imagenes, actualmente deprecado.
     Define un texto que va a hacer referencia a un campo de formulario concreto.
     En la actualidad es mas sencillo escribir solo el texto.
+
+
+    ************************************
+    ORDEN TAB y atajos teclado
+    - Atributo "tabindex"
+        Define el orden en el cual los campos son seleccionados cuando el usuario pulse la telca del tabulador.
+    - Atributo "accesskey"
+        Define una clave que el usuario puede pulsar para acceder directamente al campo.
+
+    /************************************** PREVENIR CAMBIOS POR PARTE DEL USUARIO
+
+    "readonly".- Define los campos como de solo lectura. No pueden ser editados.
+
+    "disabled".- Desabilita el campo que suele aparecer más grisáceo.
+
+
+    *********<fieldset> AGRUPAR CAMPOS
+    Es usada como un contenedor para elementos de formulario, crea un borde fino que rodea a los elementos dentro de las etiquetas de apertura y cierre de fieldset.
 
 -->
 
@@ -126,8 +174,49 @@ El for de label determina el campo al cual label estara vinculado-->
         <input type="password" name="password" value="123456"
         size="20" maxlength="20" />
     </p>
-    
+
+
 </form>
+
+<!-- Usando campos de archivo.... 2 condiciones: formularios con atributo multipart y segunda: envio de datos a través de POST-->
+
+<form action="form_handler" method="post" enctype="form/multipart">
+    <input type="file" name="buscar" size="30">
+
+    <p>
+        <label for="Nombre"><u>N</u>ombre: </label>
+        <input type="text" id="Nombre" name="Nombre" value=""
+            tabindex="3" accesskey="N" size="30" maxlength="40">
+    </p>
+
+    <table cellpadding="10" width="600">
+        <tr>
+            <td width="25%"><p>Código Cliente (readonly):</p></td>
+            <td>
+                <input type="text" size="12" value="X234GG" readonly="readonly">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Código ZIP (disabled): </p>
+            </td>
+            <td>
+                <input type="text" size="10" value="" disabled="disabled">
+            </td>
+        </tr>  
+
+    </table>
+
+    <!--Uso de Fieldset-->
+     <fieldset>
+         <p><legend>genero:</legend> <br>
+        <input type="radio" name="genero" value="male">Hombre<br>
+        <input type="radio" name="genero" value="female">Mujer</p>
+     </fieldset>
+
+</form>
+
 
 </body>
 </html>
