@@ -1,0 +1,214 @@
+<!-- 	TIPOGRAFÍA WEB
+	//Familias de Fuentes Genéricas en CSS
+	
+	<<Valores genéricos>>				<<Ejemplos Fuentes>>
+	serif 								Georgia, Times, Times New Roman
+										Garamond, y Century Schoolbook
+
+	sans-serif							Verdana, Arial, Helvetica
+										Trebuchet, y Tahoma
+
+	monospace							Courier, MS Courier New, Prestige
+
+	cursive								Lucida Handwriting, Zapf-Chancery
+
+	fantasy								Comic Sans, Whimsey, Critter, Cottonwood
+
+
+	**PROBLEMA 1
+		Queremos configurar la tipografía del texto para una pàgina web	
+	**SOLUCIÒN 1
+		p{
+			font-family:Georgia, Times, "Times New Roman", serif;
+		}	
+
+	**PROBLEMA 2
+		Como hacer para imponer un tamaño determinado de fuente
+	**SOLUCIÒN 2.- Usando la regla important
+		Pero no es garantizado, si se encuentra un important en CSS, ese important tiene màs prioridad que el que este en la página html.
+		(el important del css tiene mas prioridad que el del html)
+		p{
+			font-size: 12px!important;
+
+		}	
+
+	**PROBLEMA 3
+		Como podemos configurar una mayúscula inicial
+	**SOLUCIÒN 3.- usar el pseudo elemento first-letter
+		p:first-letter {
+			font-size:1.2em;
+			background-color:black;
+			color:white;
+		}
+
+	**PROBLEMA 4
+		Configurar mayuscula inicial y que sea centrada
+	**SOLUCIÒN 4
+		p{
+			text-indent:37%;
+			line-height:1em; /*Espacio entre pàrrafos*/
+		}
+		p .initcap {
+			font-size: 6em;
+			line-height: 0.6em;
+			font-weight: bold;
+		}
+
+	**PROBLEMA 5
+		Como configurar el tamaño de fuente usado en una pagina web
+	**SOLUCIÓN 5
+		p{
+			font-size:0.9em;
+		}	
+
+	<<tamaños absolutos>>			<<tamaños relativos>> 		<<palabras claves
+																	para tamaños>>
+
+	Inches (in)							Em 							xx-small
+	Centimeters (cm)					X-height(ex)				x-small
+	Milimeters (mm)						Pixels (px)					small
+	Points (pt)														medium
+	Picas (pc)														large
+																	x-large
+																	xx-large
+	
+	**El tamaño absoluto no es recomendado porque:
+		- Depende del navegador que se use.
+		- Del sistema operative.
+		- De la configuraciòn de la pantalla.
+		- De la tarjeta de video.
+	El tamaño absoluto solo es recomendado en casos en los cuales haya que imprimir la pagina web.
+
+	**el atributo visibility permite evitar usar el cero (0) en especificaciones de tamaño de fuente.. evitando la interpretaciòn particular de 0 que tiene cada navegador para css.
+	p{
+		visibility:hidden;
+	}
+
+	**Si se especificia un tamaño menor a 0.7em, la fuente queda casi ilegible de lo qpequeño.
+
+	**X-height(ex).- Es relativo con respecto a la fuente que se este usando, se fijuja en el tamaño de la letra X de la fuente que estemos usando.
+
+	**Pixels.- Hace referencia al tamaño de la pantalla, aunque haya diferencia en los tamaños de la pantalla donde se desarrollo y la pantalla donde se ejecuta, siempre tendrà la misma proporciòn al usar pixels
+
+
+	**PROBLEMA 6
+		Ubicar una imagen que sustituya a una mayúscula inicial
+	**SOLUCION 6
+		Se usa un elemento spam
+		p .initcap{
+			display: none;
+		}
+
+		Luego se agrega una imagen como fondo de un elemento p
+
+		p{
+			line-height:1em;
+			background-image:url(initcap-o.gif);
+			background-repeat:no-repeat;
+			text-indent:35px;
+			padding-top:45px;
+		}
+
+	**PROBLEMA 7
+		Como crear cabezeras personalizadas
+	**SOLUCIÓN 7
+		h2{
+			font: bold italic 2em Georgia, Times, "Times New Roman", serif;
+			margin: 0;
+			padding: 0;
+
+		}
+
+		//Valores aplicables a la propiedad font.
+			Font nos permite usar short hand (taquigrafia) de desarrollo pues
+			en una sola línea podemos indicar muchas propiedades.
+			
+			font-style
+			font-variant
+			font-weight
+			font-size/line-height
+			font-family
+
+			Los 3 valores iniciales pueden ir en el orden que se antoje
+			los dos ùltimos valores en el orden cuarto y quinto.
+
+	**PROBLEMA 8
+		Personalizar bordes de la parte superior e inferior de una cebezera.
+	**SOLUCION 8
+		h2{
+			font: bold italic 2em Georgia, Times, "Times New Roman", serif;
+			border-bottom: 2px dashed black;
+			border-top: 10px solid black;
+			margin: 0;
+			padding: 0.5em 0 0.5em 0;
+			font-size: 1em;
+
+		}	
+
+
+	**PROBLEMA 9
+		Queremos colocar una imagen repetida en la parte inferior de una cabecera.
+	**SOLUCIÓN 9
+		h2{
+			font: bold italic 2em Georgia, Times, "Times New Roman", serif;
+			background-image: url("images/a.jpg");
+			background-repeat: repeat-x;
+			background-position: bottom;
+			border-bottom: 10px solid #666;
+			margin: 10px 0 0 0;
+			padding: 0.5em 0 60px 0;
+		}
+
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tipografía</title>
+	<style type="text/css" media="all">
+		p .initcap{
+			display: none;
+		}
+
+	
+
+		p{
+			line-height:1em;
+			background-image:url("images/a.jpg");
+			background-repeat:no-repeat;
+			text-indent:75px;
+			padding-top:45px;
+		}
+		
+		h2{
+			font: bold italic 2em Georgia, Times, "Times New Roman", serif;
+			background-image: url("images/a.jpg");
+			background-repeat: repeat-x;
+			background-position: bottom;
+			border-bottom: 10px solid #666;
+			margin: 10px 0 0 0;
+			padding: 0.5em 0 60px 0;
+		}
+
+	</style>
+	<!--
+	-->
+
+</head>
+
+<body>
+	
+	<font face="Arial, Helvetica, sans-serif" size="+3" color="#000099">Octavo Continente</font>	
+
+	<h2>Hello World!!</h2>
+	<p>Septimo Continente</p>
+
+	<!-- En el siguiente ejemplo se ve como em hereda aun siendo un em, la fuente de su atributo padre p-->
+	<p style="font-family: serif">Un elemento hijo hereda o tiene el mismo <em>valor de propiedad</em> que su elemento padre.</p>
+
+	<p><span class="initcap">R</span>obert Moreira</p>
+    
+</body>
+</html>
