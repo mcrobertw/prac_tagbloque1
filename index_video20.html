@@ -1,0 +1,241 @@
+<!-- 	TIPOGRAFÍA WEB
+	**PROBLEMA 10
+		Queremos dar estilo al texto de una cita para que sea diferente del que se usa por defecto.
+	**SOLUCIÒN 10
+		
+		blockquote{
+			margin:0;
+			padding:0;
+			color:#555;
+		}
+
+		blockquote p{
+			font: italic 1em Georgia, Times, "Times New Roman", serif;
+			font-size: 1em;
+			margin: 1.5em 2em 0 1.5em;
+			padding: 0;
+
+		}
+
+		blockquote .source {
+			text-align: right;
+			font-style: normal;
+			margin-right: 2em;
+
+		}
+
+	**PROBLEMA 11
+		Crear citas con bordes
+
+		Queremos dar estilo al texto de una cita con bordes en la parte superior e inferior.
+
+	**SOLUCIÒN 11
+		blockquote {
+			float: left;
+			width: 200px;
+			margin: 0 0.7em 0 0;
+			padding: 0.7em;
+			color: #666;
+			background-color: black;
+			font-family: Georgia, Times, "Times New Roman", serif;
+			font-size: 1.5em; 
+			font-style: italic;
+			border-top: 1em solid #999;
+			border-bottom: 1em solid #999;
+		}
+
+		blockquote p{
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			line-height: 1.3em;
+		}
+
+		
+	**PROBLEMA 12
+			Queremos dar estilo a una cita con imágenes en cualquiera de sus lados, como por ejemplo unas comillas.
+	**SOLUCIÓN 12
+			blockquote{
+				background-image: url("images/a.jpg");
+				background-repeat: no-repeat;
+				float: left;
+				width: 175px;
+				margin: 1 0.7em 0 0;
+				padding: 10px 0 0 17px;
+				font-family: Georgia, Times, "Times New Roman", serif;
+				font-size: 1.2em;
+				font-style: italic;
+				color: black;
+
+			}
+	
+	**PROBLEMA 13
+		Queremos colorar un sangrado en la primera línea de cada párrafo.
+	**SOLUCIÓN 13
+		p{
+			text-indent:2.5em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+		}
+
+	**PROBLEMA 14
+		Queremos sangrar párrafos enteros de diferente modo.
+	**SOLUCIÓN 14
+
+		p.normal{
+			padding: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		p.large{
+			margin-left: 33%;
+			margin-right: 5%;
+		}
+
+		p.medium{
+			margin-left: 15%;
+			margin-right: 33%;
+		}
+
+	//Existen selectores de tipos (h2, a, y todos los elementos html) y selectores de clase (class) y selectores de id (ID)... existe un alternativa a ellos que son los SELECTORES HERMANO ADYACENTE
+
+	Estan representados por dos o más selectores tipos separados por el simbolo mas (+). Ejemplo:
+
+	h2+p
+		Significa que el estilo se va aplicar al primer párrafo que este dentro de una etiqueta h2
+
+	p, p+p+p+p
+		El estilo se aplica al primer párrafo y al cuarto.
+
+	p+p, p+p+p+p+p
+		El estilo se aplica al segundo párrafo y al quinto.
+
+	p+p+p, p+p+p+p+p+p
+		El estilo se aplica al tercer párrafo y al sexto.
+
+	**PROBLEMA 15
+		Queremos configurar el texto para que aparezca justificado tanto en el lado derecho como en el izquierdo.
+	**SOLUCIÓN 15
+		p{
+			width: 600px;
+			text-align: justify;
+		}
+	//Diferencia entre pseudo-clases y pseudo-elementos
+	Caso practico: Configurar la primera línea de todos los párrafos para que aparezca en negrita.
+	Solución.- Usar pseudo elemento first-line
+		p:first-line{
+			font-weight:bold;
+		}
+
+	Respuesta a diferencia.- Las dos tienen en común que nos permiten dar un determinado estilo a partes concretas del documento que no tienen porque ser etiquetas enteras.
+
+	La pseudo-clases se le aplican esas características a una parte concreta y que no se puede cambiar, mientras que el pseudo-elemento se le aplica a una zona pero que puede cambiar el contenido.. ejemplo cuando se cambia la primera línea sin importar los caracteres que esten en ella.
+
+	**PROBLEMA 16
+		Queremos estilizar la primera línea de un párrafo e incluir una imagen.
+	**SOLUCIÓN 16
+		p:first-line{
+			font-size:2em;
+			background-image:url("images/a.jpg");
+		}
+
+	**PROBLEMA 17
+		Queremos estilizar la primera línea de un párrafo e incluir una imagen.
+	**SOLUCIÓN 17
+		font
+		color
+		background
+		word-spacing
+		letter-spacing
+		text-decoration
+		vertical-align
+		text-transform
+		text-shadow
+		line-height
+		clear
+
+	**PROBLEMA 18
+		Queremos hacer que un trozo de un párrafo se destaque del resto.
+	**SOLUCIÓN 18
+		strong{ //enfasis reforzado
+			font-weight: normal;
+			background-color: yellow;
+		}
+		em { //texto enfatizado
+			font-weight: normal;
+			bakground-color: yellow;
+
+		}
+
+	**PROBLEMA 19
+		Queremos dejar más o menos espacio entre líneas
+	**SOLUCIÓN 19
+		p{
+			line-height: 2em;
+		}
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tipografía</title>
+	<style type="text/css" media="all">
+		
+
+			p.normal{
+			padding: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		p.large{
+			margin-left: 33%;
+			margin-right: 5%;
+		}
+
+		p.medium{
+			margin-left: 15%;
+			margin-right: 33%;
+		}
+
+		p:first-line{
+			font-size:2em;
+			background-image:url("images/a.jpg");
+		}
+
+		strong{ 
+			font-weight: normal;
+			background-color: yellow;
+		}
+
+		p{
+			line-height: 2em;
+			font: 3em/4em sans-serif;
+			/*font: tamaño de fuente/interlineado;*/	
+		}
+
+	</style>
+	<!--
+	-->
+
+</head>
+
+<body>
+	
+	
+		<p class="normal">
+			Vienen bajando del cielo 7 guerreros, la fuerza de los soldados del mundo tiemblan incomprendidas, no saben que su esfuerzo suma màs sangre a la antigua herida, y que el clamor <strong>>de la mujer</strong> y el debil llegan más sinceros al cielo que un esfuerzo que por orgulloso no hayarà salida.
+		</p>
+		<p class="medium">
+			Vienen bajando del cielo 7 guerreros, la fuerza de los soldados del mundo tiemblan incomprendidas, no saben que su esfuerzo suma màs sangre a la antigua herida, y que el clamor de la mujer y el debil llegan más sinceros al cielo que un esfuerzo que por orgulloso no hayarà salida.
+		</p>
+		<p class="large">
+			Vienen bajando del cielo 7 guerreros, la fuerza de los soldados del mundo tiemblan incomprendidas, no saben que su esfuerzo suma màs sangre a la antigua herida, y que el clamor de la mujer y el debil llegan más sinceros al cielo que un esfuerzo que por orgulloso no hayarà salida.
+		</p>
+	
+    
+    
+</body>
+</html>
