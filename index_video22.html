@@ -1,0 +1,119 @@
+<!--
+	**PROBLEMA 1
+    	Queremos configurar un fondo como una imagen que no se repite.
+    **SOLUCION 1
+    	body{
+        	background-image: url("images/5.jpg");
+            background-repeat: no-repeat;
+        }
+      
+      **PROBLEMA 2
+      	Queremos configurar un fondo con una imagen que se repita solo horizontalmente.
+        **SOLUCION 2
+    	body{
+        	background-image: url("images/5.jpg");
+            background-repeat: repeat-x;
+            
+            /* x rara repeticion horizontal
+            	y para repetecion vertical*/
+        }
+        
+        **PROBLEMA 3
+        	Queremos configurar un fondo con una imagen posicionada en un lugar exacto.
+            
+         **SOLUCION 3
+         	body{
+            	background-image: url("images/5.jpg");
+                background-repeat: no-repeat;
+                background-position:50px 175px;
+                /*
+                	Como argumento de background-position tambien se usa: TOP, CENTER, BOTTON
+                */
+            }
+            
+          **PROBLEMA 4
+          	Queremos configurar un fondo con una imagenfija, aunque se desplaze la pagina con el scroll.
+          **SOLUCION 4
+          	body{
+            	background-image: url("images/5.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                /*background-attachment se usa para cualquier elemento a nivel de bloque*/
+                
+           **PROBLEMA 5
+           		Queremos colocar un borde a una pagina completa.
+           **SOLUCION 5
+           		body{
+                	margin: 0;
+                    padding: 1.5em;
+                    border: 50px #666 ridge;
+                }
+            }
+            
+            //PRACTICA ADICIONAL
+            body{
+            	background-image: url("images/5.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+				background-position:-125px 75px;
+				margin:75px 75px 0px 375px;
+            }
+            h1{
+            	padding-top: 0;
+                margin-top: 0;
+                text-transform: uppercase;
+               }
+             p{
+             	text-align: justify;
+             } 
+             
+            **PROBLEMA 6
+            	Queremos colocar un separador horizontal personalizado.
+            **SOLUCION 6
+            	hr{
+                	margin-left:auto;
+                    margin-right:auto;
+                    margin-top:1.25em;
+                    margin-bottom:1.25em;
+                    widght:10px;
+                    height:10px;
+                    background-color:#777;
+                }
+        
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+	<style type="text/css">
+		 body{
+                	margin: 0;
+                    padding: 1.5em;
+                    border: 50px #666 dotted;
+                } 
+				
+				hr{
+                	margin-left:auto;
+                    margin-right:auto;
+                    margin-top:1.25em;
+                    margin-bottom:1.25em;
+                    widght:10px;
+                    height:10px;
+                    background-color:#777;
+                }
+	</style>
+	
+
+
+</head>
+
+<body>
+	<h1>Voluntad</h1>
+    <p>
+Vienen bajando del cielo 7 guerreros, la fuerza de los soldados del mundo tiemblan incomprendidas, no saben que su esfuerzo suma màs sangre a la antigua herida, y que el clamor <strong>>de la mujer</strong> y el debil llegan más sinceros al cielo que un esfuerzo que por orgulloso no hayarà salida.
+</p>
+<hr/>
+</body>
+</html>
