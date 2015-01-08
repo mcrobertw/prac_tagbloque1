@@ -1,0 +1,152 @@
+<!--
+	**PROBLEMA 1
+Queremos eliminar el subrayado de los enlaces
+    **SOLUCION 1
+    a:link, a:visited{
+    	text-decoration: none;
+        }
+    //Valores text-decoration
+    	underline: Se coloca una linea debajo del texto
+        overline: se coloca una linea debajo del texto
+        blink: texto intermitente
+        line-through: Una linea atraviesa por el medio del texto
+       none: Ningun efecto asociado al texto.
+     //EJEMPLO ADICIONAL
+     a:link, a:visited{
+    	text-decoration: none;
+        background-color: red;
+        color: white;
+        font-weight:bold;
+        }
+       **PROBLEMA 2
+       		Queremos diferenciar los enlaces del resto del texto, pero sin subrayados.
+       **SOLUCION 2
+       		a:link, a:visited{
+            	text-decoration: none;
+                font-weight: bold;
+                color: #999;
+                background-color: #666;
+            }
+         **PROBLEMA 3
+         	Queremos establecer los valores de cursores.
+         **SOLUCION 3  
+             a:link, a:visited{
+              cursor: move;
+             }
+          //Atributos de la propiedad CURSOR
+          	auto
+            crosshair
+            pointer
+            move
+            E-resize
+            text
+            wait
+            progress
+            help
+          **PROBLEMA 4: Crear Rollovers sin JavaScript
+          	Queremos crear un efecto de rollover sin javascript para modificar imagenes.
+           **SOLUCION 4
+           	a:link{
+            	color: #777;
+                text-decoration: none;
+            }
+            a:visited{
+            	color: #333;
+                text-decoration: none;
+             }
+             
+             a:link:hover, a:visited:hover{
+             	color: #777;
+                background-color: #ccc;
+             }  
+             
+             a:link:active, a:visited:active{
+             	color: #ccc;
+                background-color: #ccc;
+              }  
+              
+             //Orden en que deben colocarse las pseudo clases
+             	link, visited, hover, active
+          		Formar de recordar: Love/Hate
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+	<style type="text/css">
+		#navsite p{
+				display:none
+		}
+		#navsite{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:0.7em;
+			font-weight:bold;
+			width:12em;
+			border-right:1px solid #666;
+			padding:0;
+			margin-bottom:1em;
+			background-color:#9cc;
+			color:#333;
+		}
+		
+		#navsite ul{
+			list-style:none;
+			margin:0;
+			padding:0;
+		}
+		
+		#navsite ul li{
+			margin:0;
+			border-top:1px solid #003;
+		}
+		
+		#navsite ul li a{
+			display: block;
+			padding:2px 2px 2px 0.5em;
+			border-left:10px solid #369;
+			border-right:1px solid #68c;
+			border-bottom:1px solid #369;
+			background-color:#036;
+			color: #fff;
+			text-decoration:none;
+			width:100%;
+		}
+		
+		#navsite ul li a:hover{
+			
+			border-left:10px solid #036;
+			border-right:1px solid #69c;
+			border-bottom:1px solid #369;
+			background-color:#069f;
+			color: #fff;
+			
+		}
+		
+	</style>
+	
+
+
+</head>
+
+<body>
+	<!--
+    <a href="index_video22.html">Enlace 1</a>
+    <a href="index_video22.html">Enlace 2</a>
+    <a href="index_video22.html">Enlace 3</a>
+    <a href="index_video22.html">Enlace 4</a>
+    -->
+    <br/>
+    <div id="navsite">
+    <p>Navegacion sitio: </p>
+    <ul>
+    	<li><a href="index_video22.html">Presentaci&oacute;n</a></li>
+        <li><a href="index_video22.html">Archivos</a></li>
+        <li><a href="index_video22.html">Colabora</a></li>
+        <li><a href="index_video22.html">Conversaciones</a></li>
+        <li><a href="index_video22.html">Contactos</a></li>
+    </ul>
+    </div>
+</body>
+</html>
