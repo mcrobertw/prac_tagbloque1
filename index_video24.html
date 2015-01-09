@@ -1,0 +1,193 @@
+<!--
+	**PROBLEMA 1
+		Queremos crear un menu colapsable con CSS y JavaScript.
+    **SOLUCION 1
+    	Primero: Creamos los enlaces "html" con un atributo "id" en el elemento "ul".
+        Segundo: Creamos una "regla css" para evitar que los enlaces se vean al principio.
+        Tercero: añadimos la función de javaScript.
+        Cuarto. Establecemos un elemento anchor para desencadenar el javaScript.
+        
+        
+        <style type="text/css">
+		body{
+			margin:15%
+		}
+		#menulink{
+			display:none
+		}
+		a:link{
+			color: #669999;
+			text-decoration:none
+		}
+		a:visited{
+			color: #333;
+			text-decoration:none
+		}
+		a:link:hover, a:visited:hover{
+			color:#777;
+			background-color:#ccc
+		}
+		
+		a:link:active, a:visited:active{
+			color:#ccc;
+			background-color:#ccc
+		}
+		
+	</style>
+    
+    <script type="text/javascript">
+		function kadabra(zap)
+		{
+			if(document.getElementById){
+				var abra=document.getElementById(zap).style;
+					if (abra.display=="block")
+					{
+						abra.display="none";
+					}else{
+						abra.display="block";
+					}
+				return false;
+			}else{
+				return true
+			}
+		
+		}
+	</script>
+	
+    
+    //CODIGO EN EL BODY DE HTML
+    <div id="navsite">
+    <h5>Navegar por el sitio: </h5>
+    
+    <ul>
+    	<li><a href="/">Inicio</a></li>
+        <li><a href="/about/">Sobre</a></li>
+        <li><a href="index_video22.html">Archivos</a></li>
+        <li><a href="index_video22.html">Descargas</a></li>
+        <li><a href="index_video22.html">Comentarios</a></li>
+        <li><a href="index_video22.html">Contactos</a></li>
+    </ul>
+    
+	<h5>
+    <a href="#" onclick="return kadabra('menulink');">
+    Enlaces interesantes (+,-)</a></h5>
+    <ul id="menulink">
+    	<li><a href="index_video22.html">O'Reilly</a></li>
+        <li><a href="index_video22.html">Videotutoriales</a></li>
+        <li><a href="index_video22.html">digg</a></li>
+        <li><a href="index_video22.html">Mozilla</a></li>
+        <li><a href="index_video22.html">lynda</a></li>
+
+    </ul>
+    
+    </div>
+    
+    **PROBLEMA 2
+    	Queremos crear un menú de navegación horizontal
+    **SOLUCIÓN 2
+    	Primero.- Creamos los enlaces "html" dentro de una etiqueta "div".
+        Segundo.- Configuramos las "reglas css" para la estructura de navegación.
+        Tercero.- Nos aseguramos que la propiedad "display" este configurada como "inline"
+        Cuarto.- Creamos una "regla de estilo especifica para el enlace que esta siendo visitado.
+    
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Crear menús colapsables</title>
+	<style type="text/css">
+		
+		#navsite h{
+			display:none;
+		}
+		
+		#navsite ul{
+			padding: 3px 0;
+			margin-left: 0;
+			border-bottom: 1px solid #669;
+			font: bold 12px Verdana, Geneva, sans-serif;
+		}
+		
+		#navsite ul li{
+			list-style: none;
+			margin:0;
+			display:inline;
+		}
+		
+		#navsite ul li a{
+			padding: 3px 0.5em;
+			margin-left:4px;
+			border: 1px solid #669;
+			border-bottom: none;
+			background:#ccf;
+			text-decoration:none
+
+		}
+		
+		#navsite ul li a:link{
+			color: #339;
+		}
+		
+		#navsite ul li a:visited{
+			color: #666;
+		}
+		
+		#navsite ul li a:link:hover, #navsite ul li a:visitedhover{
+			color:#000;
+			background:#aae;
+			border-color:#336;
+		}
+
+#navsite ul li a#actual{
+			
+			background: white;
+			border-bottom: 1px solid white;
+		}
+		
+		
+	</style>
+    
+    <script type="text/javascript">
+		function kadabra(zap)
+		{
+			if(document.getElementById){
+				var abra=document.getElementById(zap).style;
+					if (abra.display=="block")
+					{
+						abra.display="none";
+					}else{
+						abra.display="block";
+					}
+				return false;
+			}else{
+				return true
+			}
+		
+		}
+	</script>
+	
+
+
+</head>
+
+<body>
+	
+    <br/>
+    <div id="navsite">
+    <h5>Navegar por el sitio: </h5>
+    
+    <ul>
+    	<li><a href="index_video22.html">Inicio</a></li>
+        <li><a href="index_video22.html">Sobre</a></li>
+        <li><a href="index_video22.html">Archivos</a></li>
+        <li><a href="index_video22.html">Descargas</a></li>
+        <li><a href="index_video22.html" id="actual">Comentarios</a></li>
+        <li><a href="index_video22.html">Contactos</a></li>
+    </ul>
+    
+	    
+    </div>
+</body>
+</html>
