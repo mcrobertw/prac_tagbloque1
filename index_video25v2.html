@@ -1,0 +1,272 @@
+<!--
+	**PROBLEMA 1
+    Primero.- Colocamos el texto dentro de un elemento ancla en un span
+   	<a href="/" id="enlacePrincipal">
+   		<span>Paginainicio</span>
+    </a>
+    Segundo.- En lugar de JavaScript, usamos la propiedad "background-image" dentro de los selectores de pseudo-clase ":hover" y ":active" para alternar las imagenes.
+    
+    **SOLUCION 1
+    	background-image: url(imagen.png);
+        background-repeat: no-repeat;
+        bacground-position: top-left;
+    //Ventajas de reemplazar texto con imágenes
+    - Separa texto del a presentación
+    - Se puede modificar una imagen en el sitio completo sólo modificando la hoja de estilos.
+    - Permite varias alternativas y se puede aplicar a distintos elementos.
+    - Si un usuario no tiene habilitado CSS verá el enlace de texto.
+    -Solución más limpia y simple que usar JavaScript.
+	
+  	<a href="/" id="linkphome"><span>Sitio Web</span></a>
+    <h2 id="miFirma"><span>Robert Moreira</span></h2>
+    
+        
+    //EJEMPLO 1
+    a span{
+		display:none
+	}
+	
+	a:link{
+		display: block;
+		width: 200px;
+		height: 200px;
+		background-image: url(images/botonfasex.jpg);
+		bakground-repeat: no-repeat;
+		background-position: top left;
+		background-size: 200px 200px
+	}
+	
+		a:link:hover{
+		display: block;
+		width: 200px;
+		height: 200px;
+		background-image: url(images/botonfase1.jpg);
+		bakground-repeat: no-repeat;
+		background-position: top left;
+		background-size: 200px 200px
+	    }
+		
+		a:link:active{
+		display: block;
+		width: 200px;
+		height: 200px;
+		background-image: url(images/botonfase2.jpg);
+		bakground-repeat: no-repeat;
+		background-position: top left;
+		background-size: 200px 200px
+	    }
+		
+		h2#miFirma span{
+			display: none
+		}
+		
+		h2#miFirma{
+		
+		width: 200px;
+		height: 200px;
+		background-image: url(images/botonfase2.jpg);
+		bakground-repeat: no-repeat;
+		background-position: top left;
+		background-size: 200px 200px
+	    }
+       
+       //EJEMPLO 2
+       	a span{
+		display:none
+	}
+	
+	a:link, a:visited{
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-image: url(images/botonfase1.jpg);
+		bakground-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: 40px 40px
+	}
+	
+		a:link:hover, a:visited:hover{
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-image: url(images/botonfase1.jpg);
+		bakground-repeat: no-repeat;
+		background-position: 0 -30px;
+		background-size: 40px 40px
+	    }
+		
+		a:link:active, a:visited:active{
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-image: url(images/botonfase2.jpg);
+		bakground-repeat: no-repeat;
+		background-position: 0 -60px;
+		background-size: 40px 40px
+	    }
+      
+      **PROBLEMA 2
+      	Queremos construir un menú de navegación con pestañas curvadas que funcione incluso cuando se redimensiona el texto.
+        
+      **SOLUCION 2 .- Empezamos por escribir el menú de navegación dentro de una etiqueta <div>
+		//PASO 1
+      <div id="header">
+      	<h2>Sitio Video Tutoriales</h2>
+        <h5>Navegación sitio</h5>
+        <ul>
+         	<li>
+            	<a href=""index_video23.html">Inicio</a>
+            </li>
+            <li>
+            	<a href=""index_video23.html">Online</a>
+            </li>
+            <li>
+            	<a href=""index_video23.html">Archivos</a>
+            </li>
+            <li>
+            	<a href=""index_video23.html">Descargas</a>
+            </li>
+            <li>
+            	<a href=""index_video23.html">Comentarios</a>
+            </li>
+            <li>
+            	<a href=""index_video23.html">Foros</a>
+            </li>
+        </ul>
+        
+      </div>
+      
+      //PASO 2
+      Luego necesitamos dos imágenes para la pestaña: una pestaña para los enlaces y otra para la página actual.
+      Luego colocamos el lado derecho de la pestaña en el fondo del item list.
+      
+      #header li{
+      		float: left;
+            background-image: url(tab_right.gif);
+            background-repeat: no-repeat;
+            background-position: right top;
+            margin: 0;
+            padding: 0;
+      }
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Crear menús colapsables</title>
+	<style type="text/css">
+	body{	
+		margin: 0;
+		padding: 0;
+		background-color: #ccc;
+	}
+	
+	#header h2{
+		margin:10px;
+		padding-top:0
+	}
+	
+	#header{
+		float:left;
+		width:100p%;
+		background-color:white;
+		padding-top:0;
+		margin-top:0;
+		/*background-image:  url(images/pestanacafe.gif);*/
+		background-position:bottom;
+		background-repeat:repeat-x
+	}
+	
+	#header h5{
+		display:none
+	}
+	
+	#header ul{
+		margin: 0;
+		padding: 10px 10px 0;
+		list-style: none;
+	}
+	
+	#header li{
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#header a{
+		display:block}
+		
+	#header li{
+		float:left;
+		background-image:url(images/pestanacafe.gif);
+		background-repeat: no-repeat;
+		background-position: right top;
+		margin:0;
+		padding:0
+	}
+	
+	
+	#header a{
+		display: block;
+		background-image:url(images/pestanaamarilla.gif);
+		background-repeat: no-repeat;
+		background-position: left top;
+		padding: 5px 15px;
+		color: #ccc;
+		text-decoration:none;
+		font-family:Verdana, Geneva, sans-serif
+	}
+	
+	#header #actual{
+
+		background-image:url(images/pestanaamarilla.gif);
+	}
+	
+	#header #actual a{
+
+		background-image:url(images/pestanacafe.gif);
+		color:black
+	}
+		
+	</style>
+    
+  
+	
+
+
+</head>
+
+<body>
+
+    
+    <div id="header">
+      	<h2>Sitio Video Tutoriales</h2>
+        <h5>Navegación sitio</h5>
+        <ul>
+         	<li>
+            	<a href="index_video23.html">Inicio</a>
+            </li>
+            <li>
+            	<a href="index_video23.html">Online</a>
+            </li>
+            <li>
+            	<a href="index_video23.html">Archivos</a>
+            </li>
+            <li>
+            	<a href="index_video23.html">Descargas</a>
+            </li>
+            <li id="actual">
+            	<a href="index_video23.html">Comentarios</a>
+            </li>
+            <li>
+            	<a href="index_video23.html">Foros</a>
+            </li>
+        </ul>
+        
+      </div>
+      
+
+</body>
+</html>
