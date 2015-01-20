@@ -1,0 +1,67 @@
+<!--
+	¿Què es JavaScript?
+    - Popular lenguaje de script que permite a una página estática interactuar con los usuarios y responder a eventos.
+    - Originalmente llamado LiveScript, desarrollado por Brendan Eich en 1986 para Netscape. Se ejecutan en prácticamente todas las plataformas y es independiente del hardware.
+    - Su sintaxis es similar a la de C, Perl o Java, como Perl es un lenguaje orientado a objetos, no un lenguaje compilado.
+    - JavaScript esta solamente integrado con HTML. Los programas JavaScript son ejecutados por un interprete JavaScript pero que suele estar integrado dentro  del navegador.
+    - El JavaScript manejado por el navegador es llamado JavaScript del lado del cliente. Pero JavaScript puede tambien ser programado como un lenguaje CGI, tal como Perl o ASP.
+	
+    ***¿que no es JavaScript?
+    -No es Java. Java fue desarrollado por Sun. JavaScript fue desarrollado por netscape.
+    - No es HTML, aunque código JavaScript puede ser embebido en un documento HTML y es contenido dentro de etiquetas HTML.
+    - Aunque es un lenguaje orientado a objetos, no lo es de modo estricto. No admite los mecanismos de herencias y clases.
+    - No es el ùnico lenguaje que puede ser embebido en una aplicaciòn. VBScrpipt, por ejemplo, se embebe en el Internet Explorer.
+    
+    **Para que podemos usar javascript
+    - JavaScript es usado para detectar y reaccionar a eventos iniciados por el usuario (puntero sobre un enlace por ejemplo).
+    - Permite controlar el comportamiento de la pagina sin ninguna transmisiòn de red ni contacto con el servidor.
+    - Tiene funciones de string y admite expresiones regulares. Su nùcleo funciona como un lenguaje de programación.
+    - JavaScript tambièn lee y escribe valores de cookies, y crea HTML dinámico basado en el valor de la cookie.
+    
+    **Javascript y eventos
+    -HTML es estàtico. No puede reaccionar a las entradas de los usuarios. JavaScript es dinàmico.
+    - Javascript puede interactuar asincrònicamente con los usuarios desde el lado del cliente. Puede validar entradas de usuarios.    
+    - JavaScript garantiza una versiòn standard internacional con la llamada ECMA-script.
+    
+    
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Eventos</title>
+	<script language="javascript">
+		function symError()
+		{
+			return true;			
+		}
+		
+		window.onerror=symError;
+		var SymRealWinOpen=window.open;
+		
+		function SymWinOpen(url, name, attributes)
+		{
+			return (new Object());
+		}
+		
+		window.open=SymWinOpen;
+	</script>
+    
+</head>
+
+<body bgcolor="yellow" text="blue">
+
+<form>
+	<input type="button" value="pulsame" onclick="alert('Pulsado')"
+    
+    />
+</form>
+
+<script language="javascript" type="text/javascript">
+	document.writeln("<h2>Bienvenido a mas web</h2>");
+</script>
+<font size="+2">Un texto sencillo</font>
+ 
+</body>
+</html>
